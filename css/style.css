@@ -1,0 +1,1705 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f4f1;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   FLOATING NAVIGATION
+======================================== */
+
+.site-header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+    max-width: 600px;
+
+    z-index: 100;
+}
+
+.navigation {
+    width: 100%;
+
+    padding: 12px 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(244, 244, 241, 0.82);
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 100px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: -0.05em;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 12px;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   GENERAL TYPOGRAPHY
+======================================== */
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+
+    letter-spacing: -0.06em;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 100vh;
+
+    max-width: 1500px;
+    margin: auto;
+
+    padding: 160px 45px 80px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    position: absolute;
+
+    right: 45px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 25%;
+    height: 72%;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    animation: heroImageIn 1.4s ease forwards;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    animation: heroIn 1s ease forwards;
+}
+
+.hero h1 {
+    margin-top: 25px;
+
+    font-size: clamp(70px, 10vw, 155px);
+
+    line-height: 0.85;
+}
+
+.hero-description {
+    max-width: 500px;
+
+    margin-top: 45px;
+
+    font-size: 16px;
+
+    color: #555;
+}
+
+.hero-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    padding-bottom: 5px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid #111;
+}
+
+.hero-link span {
+    transition: transform 0.3s ease;
+}
+
+.hero-link:hover span {
+    transform: translateY(4px);
+}
+
+
+/* HERO NUMBER */
+
+.hero-number {
+    position: absolute;
+
+    right: 45px;
+    bottom: 55px;
+
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.intro {
+    max-width: 1500px;
+    margin: auto;
+
+    padding: 200px 45px;
+}
+
+.intro h2 {
+    margin-top: 30px;
+
+    font-size: clamp(60px, 8vw, 125px);
+
+    line-height: 0.9;
+}
+
+.intro h2 span {
+    color: #777;
+}
+
+.intro-text {
+    max-width: 600px;
+
+    margin-top: 60px;
+    margin-left: 35%;
+
+    font-size: 20px;
+
+    color: #555;
+}
+
+
+/* ========================================
+   WORK
+======================================== */
+
+.work {
+    max-width: 1500px;
+    margin: auto;
+
+    padding: 120px 45px;
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 150px;
+}
+
+.section-heading h2 {
+    margin-top: 20px;
+
+    font-size: clamp(60px, 9vw, 140px);
+
+    line-height: 0.85;
+}
+
+.project-count {
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* ========================================
+   PROJECT LAYOUT
+======================================== */
+
+.project {
+    margin-bottom: 220px;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/*
+    Alternating projects
+
+    Normal:
+    IMAGE | TEXT
+
+    Reverse:
+    TEXT | IMAGE
+*/
+
+.project-reverse {
+    grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.5fr);
+}
+
+
+/* ========================================
+   PROJECT IMAGE
+======================================== */
+
+.project-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #deded9;
+}
+
+
+/* IMAGE */
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* IMAGE HOVER */
+
+.project-image:hover img {
+    transform: scale(1.035);
+}
+
+
+/* ========================================
+   PROJECT INFO
+======================================== */
+
+.project-info {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    max-width: 450px;
+}
+
+
+/* Reverse project */
+
+.project-reverse .project-info {
+    order: 1;
+}
+
+.project-reverse .project-image {
+    order: 2;
+}
+
+
+/* NUMBER */
+
+.project-number {
+    margin-bottom: 14px;
+
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* CATEGORY */
+
+.project-category {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* TITLE */
+
+.project-info h3 {
+    font-size: clamp(42px, 4.5vw, 72px);
+
+    line-height: 0.9;
+}
+
+
+/* DESCRIPTION */
+
+.project-info p:not(.project-number):not(.project-category) {
+    max-width: 350px;
+
+    font-size: 15px;
+
+    color: #555;
+}
+
+
+/* PROJECT LINK */
+
+.project-link {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: 25px;
+
+    padding-bottom: 5px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid #111;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-link:hover {
+    opacity: 0.5;
+
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about {
+    max-width: 1500px;
+    margin: auto;
+
+    padding: 220px 45px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+.about h2 {
+    margin-top: 30px;
+
+    font-size: clamp(60px, 7vw, 110px);
+
+    line-height: 0.88;
+}
+
+.about-text {
+    max-width: 500px;
+
+    align-self: center;
+}
+
+.about-text p {
+    margin-bottom: 30px;
+
+    font-size: 20px;
+
+    color: #555;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact {
+    min-height: 80vh;
+
+    max-width: 1500px;
+    margin: auto;
+
+    padding: 180px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.contact h2 {
+    margin-top: 30px;
+
+    font-size: clamp(70px, 11vw, 170px);
+
+    line-height: 0.85;
+}
+
+
+/* CONTACT LINKS */
+
+.contact-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-top: 55px;
+}
+
+.contact-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: fit-content;
+
+    padding-bottom: 7px;
+
+    font-size: 15px;
+
+    border-bottom: 1px solid #111;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-link:hover {
+    opacity: 0.5;
+
+    transform: translateX(5px);
+}
+
+/* =========================================
+   PROJECT INDEX
+   ========================================= */
+
+.project-index {
+    width: 80%;
+    Margin: 0 auto;
+    max-width: 1200px;
+    padding: 200px 0 200px;
+    Box-sizing: border-box;
+    scroll-margin-top: 100px;
+}
+
+.project-index-header {
+    margin-bottom: 0px;
+}
+
+.project-index-label {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    opacity: 0.55;
+}
+
+.project-index-header h2 {
+    font-size: clamp(42px, 6vw, 80px);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+
+/* Groups */
+
+.project-index-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 60px;
+}
+
+.project-index-group h3 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    margin: 0 0 18px;
+}
+
+
+/* Project links */
+
+.project-index-item {
+    display: grid;
+    grid-template-columns: 20px 1fr 25px;
+    align-items: center;
+
+    padding: 0px 0;
+
+    color: inherit;
+    text-decoration: none;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+    transition:
+        opacity 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.project-index-item:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.project-index-item span:first-child {
+    font-size: 12px;
+    opacity: 0.45;
+}
+
+.project-index-item span:nth-child(2) {
+    font-size: 12px;
+}
+
+.project-index-item span:last-child {
+    text-align: right;
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.project-index-item:hover {
+    opacity: 0.55;
+    padding-left: 8px;
+}
+
+
+/* Featured projects */
+
+.featured-group {
+    grid-column: 1 / -1;
+    margin-bottom: 0px;
+}
+
+.featured-group .project-index-item span:nth-child(2) {
+    font-size: 12px;
+}
+
+
+/* Smooth scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .project-index {
+        padding: 70px 0 80px;
+    }
+
+    .project-index-header {
+        margin-bottom: 40px;
+    }
+
+    .project-index-groups {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    .featured-group {
+        grid-column: auto;
+    }
+
+    .project-index-item {
+        grid-template-columns: 35px 1fr 20px;
+    }
+
+    .project-index-item span:nth-child(2) {
+        font-size: 15px;
+    }
+
+}
+
+/* CONTACT ICON */
+
+.contact-icon,
+.linkedin-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    border-top: 1px solid #ccc;
+
+    padding: 30px 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes heroIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes heroImageIn {
+
+    from {
+        opacity: 0;
+
+        transform: scale(1.04);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding: 140px 25px 100px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .hero-image {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        width: 100%;
+        height: 55vh;
+
+        margin-top: 60px;
+
+        order: 2;
+    }
+
+
+    .hero-content {
+        order: 1;
+    }
+
+
+    .hero-number {
+        display: none;
+    }
+
+
+    /* PROJECTS */
+
+    .project,
+    .project-reverse {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 130px;
+    }
+
+
+    .project-image,
+    .project-reverse .project-image {
+
+        width: 100%;
+
+        order: 1;
+    }
+
+
+    .project-info,
+    .project-reverse .project-info {
+
+        width: 100%;
+
+        max-width: 600px;
+
+        order: 2;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+}
+
+/* =====================================================
+   STANDALONE PROJECT TEXT
+===================================================== */
+
+.project-standalone {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.project-standalone h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.05;
+    font-weight: 500;
+    margin: 0 0 25px;
+}
+
+.project-standalone p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        top: 12px;
+
+        width: calc(100% - 24px);
+    }
+
+
+    .navigation {
+        padding: 10px 12px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+    }
+
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+
+    .hero {
+        padding: 120px 20px 70px;
+    }
+
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+
+        margin-top: 35px;
+    }
+
+
+    .hero-image {
+        height: 45vh;
+
+        margin-top: 45px;
+    }
+
+
+    .intro {
+        padding: 120px 20px;
+    }
+
+
+    .intro h2 {
+        font-size: 58px;
+    }
+
+
+    .intro-text {
+        margin-left: 0;
+
+        margin-top: 40px;
+
+        font-size: 17px;
+    }
+
+
+    .work {
+        padding: 80px 20px;
+    }
+
+
+    .section-heading {
+        margin-bottom: 80px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 65px;
+    }
+
+
+    .project {
+        margin-bottom: 110px;
+    }
+
+
+    .project-info h3 {
+        font-size: 48px;
+    }
+
+
+    .about {
+        padding: 120px 20px;
+    }
+
+
+    .about h2 {
+        font-size: 58px;
+    }
+
+
+    .about-text p {
+        font-size: 17px;
+    }
+
+
+    .contact {
+        min-height: 70vh;
+
+        padding: 120px 20px;
+    }
+
+
+    .contact h2 {
+        font-size: 70px;
+    }
+
+
+    footer {
+        padding: 25px 20px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+/* =====================================================
+   PROJECT PAGES
+===================================================== */
+
+.project-page {
+    width: min(1400px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   PROJECT HERO
+===================================================== */
+
+.project-page-hero {
+    padding-top: 110px;
+    margin-bottom: 70px;
+}
+
+.project-page-hero-image {
+    width: 48%;
+}
+
+.project-page-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+
+/* =====================================================
+   PROJECT INTRODUCTION
+===================================================== */
+
+.project-introduction {
+    max-width: 900px;
+    margin: 0 auto 110px;
+    text-align: center;
+}
+
+.project-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.55;
+    margin-bottom: 14px;
+}
+
+.project-introduction h1 {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+    font-weight: 500;
+    margin: 0 auto 35px;
+    max-width: 900px;
+}
+
+.project-intro-text {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.project-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   PROJECT STORY
+===================================================== */
+
+/* =====================================================
+   PROJECT STORY
+===================================================== */
+
+.project-story {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.8fr);
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+
+/* Normale sectie:
+   afbeelding links - tekst rechts */
+
+.project-story-image {
+    grid-column: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-story-text {
+    grid-column: 2;
+    max-width: 600px;
+}
+
+
+/* Omgekeerde sectie:
+   tekst links - afbeelding rechts */
+
+.project-story-reverse .project-story-image {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.project-story-reverse .project-story-text {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 600px;
+}
+
+
+/* Afbeeldingen */
+
+.project-story-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.project-story-image:hover img {
+    transform: scale(1.02);
+}
+
+
+/* Tekst */
+
+.project-story-text h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.05;
+    font-weight: 500;
+    margin: 0 0 25px;
+}
+
+.project-story-text p,
+.project-story-text li {
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.project-story-text p {
+    margin-bottom: 18px;
+}
+
+.project-story-text ol {
+    padding-left: 22px;
+    margin: 25px 0;
+}
+
+.project-story-text li {
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   FINAL IMAGE
+===================================================== */
+
+.project-final-image {
+    width: 65%;
+    margin: 0 auto 100px;
+}
+
+.project-final-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.project-end {
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+.back-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   PROJECT CONTACT
+===================================================== */
+
+.project-contact {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 90px 0 70px;
+    text-align: center;
+}
+
+.project-contact h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 500;
+    margin-bottom: 55px;
+}
+
+.project-contact-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.project-contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0 35px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-contact-item + .project-contact-item {
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+/* Alle iconen exact even groot */
+
+.project-contact-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-contact-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Tekst exact dezelfde grootte */
+
+.project-contact-item span {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* =====================================================
+   PROJECT NAVIGATION
+===================================================== */
+
+.project-navigation {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(1400px, 90%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.project-nav-logo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.project-nav-links a {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: inherit;
+
+    opacity: 0.65;
+
+    transition: opacity 0.3s ease;
+}
+
+.project-nav-links a:hover {
+    opacity: 1;
+}
+
+/* =====================================================
+   CENTERED IMAGE WITH TEXT ABOVE
+===================================================== */
+
+.project-image-with-text {
+    max-width: 1000px;
+    margin: 0 auto 90px;
+}
+
+.project-image-with-text-content {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.project-image-with-text-content h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.05;
+    font-weight: 500;
+    margin: 0 0 25px;
+}
+
+.project-image-with-text-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.project-image-with-text-image {
+    width: 100%;
+}
+
+.project-image-with-text-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =====================================================
+   TWO IMAGES SIDE BY SIDE
+===================================================== */
+
+.project-two-images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    margin: 0 auto 90px;
+}
+
+.project-two-image {
+    width: 100%;
+}
+
+.project-two-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.project-two-image:hover img {
+    transform: scale(1.02);
+}
+
+/* =========================================
+   PROJECT NAVIGATION
+========================================= */
+
+.project-navigation {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(1400px, 90%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 22px;
+
+    /* Zelfde achtergrond als de website */
+    background: #f5f5f3;
+
+    z-index: 1000;
+
+    box-sizing: border-box;
+}
+
+
+/* WP */
+
+.project-nav-logo {
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #111;
+}
+
+
+/* Back + Contact */
+
+.project-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.project-nav-links a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #111;
+
+    transition: opacity 0.3s ease;
+}
+
+.project-nav-links a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================================
+   PROJECT INTRODUCTION IMAGE
+========================================= */
+
+.project-page {
+    padding-top: 100px;
+}
+
+.project-introduction-image {
+    width: 75%;
+    max-width: 1100px;
+    margin: 0 auto 55px;
+}
+
+.project-introduction-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   PROJECT INTRODUCTION
+========================================= */
+
+.project-introduction {
+    max-width: 800px;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+}
+
+.project-introduction-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-introduction h1 {
+    margin: 10px 0 25px;
+}
+
+.project-intro-text {
+    max-width: 700px;
+}
+
+.project-intro-text p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .project-navigation {
+        top: 0px;
+        width: 94%;
+        padding: 12px 16px;
+    }
+
+    .project-nav-links {
+        gap: 18px;
+    }
+
+    .project-introduction-image {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .project-introduction {
+        margin-bottom: 60px;
+    }
+
+}
+
+/* =====================================================
+   CENTERED PROJECT IMAGE
+===================================================== */
+
+.project-centered-image {
+    width: 75%;
+    max-width: 1100px;
+    margin: 0 auto 90px;
+}
+
+.project-centered-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* =====================================================
+   SMALL PROJECT HERO
+===================================================== */
+
+.project-page-hero {
+    padding-top: 85px;
+    margin-bottom: 55px;
+}
+
+.project-page-hero-image {
+    width: 38%;
+    max-width: 500px;
+}
+
+.project-page-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =====================================================
+   PROJECT PAGE MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .project-page {
+        width: 88%;
+    }
+
+    .project-page-hero {
+        padding-top: 10px;
+        margin-bottom: 55px;
+    }
+
+    .project-page-hero-image {
+        width: 10%;
+    }
+
+    .project-introduction {
+        margin-bottom: 70px;
+    }
+
+    .project-introduction h1 {
+        font-size: 2.7rem;
+    }
+
+    .project-story,
+    .project-story-reverse {
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
+        margin-bottom: 70px;
+    }
+
+    /* Op mobiel altijd eerst afbeelding, daarna tekst */
+
+    .project-story-image {
+        order: 1;
+    }
+
+    .project-story-text {
+        order: 2;
+        max-width: none;
+    }
+
+    .project-story-text h2 {
+        font-size: 2rem;
+    }
+
+    .project-final-image {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .project-contact {
+        padding: 65px 0 50px;
+    }
+
+    .project-contact-items {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .project-contact-item {
+        padding: 0;
+    }
+
+    .project-contact-item + .project-contact-item {
+        border-left: none;
+        padding-top: 35px;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+}
